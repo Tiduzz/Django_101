@@ -47,6 +47,7 @@ def submit_evento(request):
         date_evento = request.POST.get('date_evento')
         description = request.POST.get('description')
         usuario = request.user
+        local = request.POST.get('local')
         Evento.objects.create(titulo=titulo,
                                 date_evento=date_evento, 
                                 description=description, 
